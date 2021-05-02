@@ -14,3 +14,10 @@ func (q *Queue) DeQueue() int {
 	q.items = q.items[1:len]
 	return val
 }
+
+func (q *Queue) Peek() int {
+	if len(q.items) <= 0 {
+		return 0
+	}
+	return q.items[0]
+}

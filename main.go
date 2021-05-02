@@ -10,7 +10,7 @@ import (
 
 func main() {
 	//testStack()
-	// testQueue()
+	//testQueue()
 	testLinkedList()
 }
 

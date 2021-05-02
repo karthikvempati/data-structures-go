@@ -3,13 +3,15 @@ package main
 import (
 	"fmt"
 
+	"github.com/karthikvempati/data-structures-go/linkedlist"
 	"github.com/karthikvempati/data-structures-go/queue"
 	"github.com/karthikvempati/data-structures-go/stack"
 )
 
 func main() {
 	//testStack()
-	testQueue()
+	// testQueue()
+	testLinkedList()
 }
 
 func testStack() {
@@ -29,4 +31,14 @@ func testQueue() {
 	fmt.Println(q)
 	fmt.Println(q.DeQueue())
 	fmt.Println(q)
+}
+
+func testLinkedList() {
+	l := linkedlist.LinkedList{}
+	l.Prepend(1)
+	l.Prepend(5)
+	l.Prepend(7)
+	l.Prepend(9)
+	l.Prepend(3)
+	fmt.Println(l)
 }

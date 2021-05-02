@@ -7,6 +7,10 @@ import (
 )
 
 func main() {
+	testStack()
+}
+
+func testStack() {
 	s := stack.Stack{}
 	s.Push(100)
 	s.Push(200)

@@ -6,12 +6,12 @@ type node struct {
 }
 
 type LinkedList struct {
-	head   *node
-	length int
+	Head   *node
+	Length int
 }
 
 func (l *LinkedList) Prepend(val int) {
-	c := node{val: val, next: l.head}
-	l.head = &c
-	l.length++
+	c := node{val: val, next: l.Head}
+	l.Head = &c
+	l.Length++
 }

@@ -1,8 +1,8 @@
 package linkedlist
 
 type Node struct {
-	val  int
-	next *Node
+	Val  int
+	Next *Node
 }
 
 type LinkedList struct {
@@ -11,7 +11,7 @@ type LinkedList struct {
 }
 
 func (l *LinkedList) Prepend(val int) {
-	c := Node{val: val, next: l.Head}
+	c := Node{Val: val, Next: l.Head}
 	l.Head = &c
 	l.Length++
 }

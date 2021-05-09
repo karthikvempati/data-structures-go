@@ -1,7 +1,7 @@
 package stack
 
 type Stack struct {
-	items []int 
+	items []int
 }
 
 //Push

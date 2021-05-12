@@ -29,20 +29,24 @@ func (h *Heap) PrintHeap() {
 }
 
 func (h *Heap) PercolateUp(i int) {
-	for ok := true; ok && i >= 0 && h.Parent(i) >= 0 && h.items[h.Parent(i)] < h.items[i]; ok = (i >= 0 && h.Parent(i) >= 0 && h.items[h.Parent(i)] < h.items[i]) {
+	parent := h.Parent(i)
+	for i >= 0 && parent >= 0 && h.items[parent] < h.items[i] {
 		temp := h.items[i]
-		h.items[i] = h.items[h.Parent(i)]
-		h.items[h.Parent(i)] = temp
-		i = h.Parent(i)
+		h.items[i] = h.items[parent]
+		h.items[parent] = temp
+		i = parent
+		parent = h.Parent(i)
 	}
 }
 
 func (h *Heap) PercolateUpMinHeap(i int) {
-	for ok := true; ok && i >= 0 && h.Parent(i) >= 0 && h.items[h.Parent(i)] > h.items[i]; ok = (i >= 0 && h.Parent(i) >= 0 && h.items[h.Parent(i)] > h.items[i]) {
+	parent := h.Parent(i)
+	for i >= 0 && parent >= 0 && h.items[parent] > h.items[i] {
 		temp := h.items[i]
-		h.items[i] = h.items[h.Parent(i)]
-		h.items[h.Parent(i)] = temp
-		i = h.Parent(i)
+		h.items[i] = h.items[parent]
+		h.items[parent] = temp
+		i = parent
+		parent = h.Parent(i)
 	}
 }
 

@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	heap1 "github.com/karthikvempati/data-structures-go/heap"
 	linked_list "github.com/karthikvempati/data-structures-go/linkedlist"
 	"github.com/karthikvempati/data-structures-go/queue"
 	"github.com/karthikvempati/data-structures-go/stack"
@@ -13,7 +14,27 @@ func main() {
 	//testStack()
 	//testQueue()
 	//testLinkedList()
-	testBinaryTree()
+	//testBinaryTree()
+	testHeap()
+	testMinHeap()
+}
+
+func testHeap() {
+	nums := []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+	heap := heap1.Heap{}
+	for i := 0; i < len(nums); i++ {
+		heap.InsertElement(nums[i])
+	}
+	heap.PrintHeap()
+}
+
+func testMinHeap() {
+	nums := []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+	heap := heap1.Heap{}
+	for i := 0; i < len(nums); i++ {
+		heap.InsertMinHeapElement(nums[i])
+	}
+	heap.PrintHeap()
 }
 
 func testBinaryTree() {

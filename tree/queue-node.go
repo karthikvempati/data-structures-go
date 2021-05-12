@@ -17,7 +17,7 @@ func (q *Queue) DeQueue() *BinaryNode {
 
 func (q *Queue) Peek() *BinaryNode {
 	if len(q.items) <= 0 {
-		return &BinaryNode{}
+		return &BinaryNode{} 
 	}
 	return q.items[0]
 }

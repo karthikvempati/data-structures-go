@@ -15,8 +15,27 @@ func main() {
 	//testQueue()
 	//testLinkedList()
 	//testBinaryTree()
-	testHeap()
-	testMinHeap()
+	//testHeap()
+	//testMinHeap()
+	//testBuildHeap()
+	//testDeleteMax()
+	testDeleteMin()
+}
+
+func testDeleteMax() {
+	nums := []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+	heap := heap1.Heap{}
+	heap.BuildHeap(nums)
+	heap.DeleteMaximum()
+	heap.PrintHeap()
+}
+
+func testDeleteMin() {
+	nums := []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+	heap := heap1.Heap{}
+	heap.BuildMinHeap(nums)
+	heap.DeleteMinimum()
+	heap.PrintHeap()
 }
 
 func testHeap() {
@@ -25,6 +44,13 @@ func testHeap() {
 	for i := 0; i < len(nums); i++ {
 		heap.InsertElement(nums[i])
 	}
+	heap.PrintHeap()
+}
+
+func testBuildHeap() {
+	nums := []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+	heap := heap1.Heap{}
+	heap.BuildHeap(nums)
 	heap.PrintHeap()
 }
 

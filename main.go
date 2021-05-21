@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 
+	"github.com/karthikvempati/data-structures-go/bst"
+	bst1 "github.com/karthikvempati/data-structures-go/bst"
 	heap1 "github.com/karthikvempati/data-structures-go/heap"
 	linked_list "github.com/karthikvempati/data-structures-go/linkedlist"
 	"github.com/karthikvempati/data-structures-go/queue"
@@ -19,7 +21,20 @@ func main() {
 	//testMinHeap()
 	//testBuildHeap()
 	//testDeleteMax()
-	testDeleteMin()
+	//testDeleteMin()
+	testBinarySerachTree()
+}
+
+func testBinarySerachTree() {
+	bst := bst.BinarySearchTree{}
+	nums := []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+	root := bst.BuildBST(nums)
+	array := bst.BstToArray(root)
+	fmt.Println(array)
+	inorder := bst.InOrderTraversal(root)
+	fmt.Println(inorder)
+	root = bst1.InsertElement(root, 10)
+	fmt.Println(bst.InOrderTraversal(root))
 }
 
 func testDeleteMax() {
